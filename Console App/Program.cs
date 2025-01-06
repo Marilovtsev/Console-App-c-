@@ -10,8 +10,22 @@ namespace Console_App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            Console.ReadKey();
+            int health;
+            int armor;
+            int damage;
+
+            Console.Write("Enter your HP:");
+            health = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter your armor point:");
+            armor = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter damage point:");
+            damage = Convert.ToInt32(Console.ReadLine());
+
+            health -= damage/100 * armor;
+
+            Console.WriteLine("After you take " + damage + " points of damage, you have " + health + "HP left.");
         }
     }
 }
