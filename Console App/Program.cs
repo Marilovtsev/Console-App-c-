@@ -10,7 +10,7 @@ namespace Console_App
     {
         static void Main(string[] args)
         {
-            int health;
+            float health;
             int armor;
             int damage;
 
@@ -23,9 +23,9 @@ namespace Console_App
             Console.Write("Enter damage point:");
             damage = Convert.ToInt32(Console.ReadLine());
 
-            health -= damage / 100 * armor;
+            health -= Convert.ToSingle(damage) / 100 * armor;
 
-            Console.WriteLine("After you take " + damage + " points of damage, you have " + health + "HP left.");
+            Console.WriteLine("After you take " + damage + " points of damage, you have " + health + " HP left.");
             Console.WriteLine("\nPress any key to exit...");
             Console.ReadKey();
         }
