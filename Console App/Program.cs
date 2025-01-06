@@ -23,9 +23,11 @@ namespace Console_App
             Console.Write("Enter damage point:");
             damage = Convert.ToInt32(Console.ReadLine());
 
-            health -= damage/100 * armor;
+            health -= damage / 100 * armor;
 
             Console.WriteLine("After you take " + damage + " points of damage, you have " + health + "HP left.");
+            Console.WriteLine("\nPress any key to exit...");
+            Console.ReadKey();
         }
     }
 }
